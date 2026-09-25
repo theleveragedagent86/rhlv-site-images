@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Text Ryan Rose</title>
+<style>
+  :root{--bg:#FFFFFF;--ink:#050E3D;--ink-2:#55627F;--accent:#1768E5;--accent-dark:#0B3FA8;--line:#E4E7EF;}
+  @media (prefers-color-scheme: dark){:root{--bg:#000000;--ink:#F7F8FA;--ink-2:#9AA3BC;--accent:#5B9BFF;--accent-dark:#1768E5;--line:#2A2F3D;}}
+  *{box-sizing:border-box;}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,Helvetica,Arial,sans-serif;padding:24px 16px;}
+  .card{max-width:420px;width:100%;text-align:center;}
+  .label{font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
+  h1{font-size:28px;line-height:1.2;letter-spacing:-0.02em;margin:0 0 12px;}
+  p{font-size:16px;line-height:1.6;color:var(--ink-2);margin:0 0 24px;}
+  .btn{display:block;padding:16px;background:var(--accent);color:#FFFFFF;text-decoration:none;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-size:14px;transition:transform .15s cubic-bezier(.34,1.56,.64,1),opacity .15s;}
+  .btn:hover{background:var(--accent-dark);}
+  .btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;}
+  .btn:active{transform:scale(.98);}
+  .num{display:block;margin-top:16px;font-size:20px;font-weight:700;color:var(--ink);text-decoration:none;}
+  .num:hover{text-decoration:underline;}
+  .num:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  .small{font-size:13px;margin-top:20px;}
+</style>
+</head>
+<body>
+<main class="card">
+  <p class="label">The Rose Report</p>
+  <h1>Text Ryan Rose</h1>
+  <p>Your text app should open with a message started. If it didn't, tap the button below.</p>
+  <a class="btn" id="sms" href="sms:+17027475921?&body=Hi%20Ryan%2C%20I%27d%20like%20to%20know%20what%20my%20home%20is%20worth.%20My%20address%20is%20">Text me now</a>
+  <a class="num" href="tel:+17027475921">702-747-5921</a>
+  <p class="small">Ryan Rose &middot; Real Broker, LLC</p>
+</main>
+<script>
+  // Phones only: jump straight into the text app. Desktop just shows the page.
+  if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    window.location.href = document.getElementById('sms').href;
+  }
+</script>
+</body>
+</html>
